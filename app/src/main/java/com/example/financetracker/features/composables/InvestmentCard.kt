@@ -4,14 +4,11 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -48,13 +45,15 @@ fun InvestmentCard() {
 
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier.fillMaxWidth()
+            horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
                 text = "$14,850.00",
-                style = MaterialTheme.typography.headlineMedium
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.weight(2f)
             )
+
+            GoalProgressBar(modifier = Modifier.weight(1f), percentage = .9f)
         }
     }
 }
@@ -65,7 +64,7 @@ fun InvestmentCardPreview() {
     Column(
         verticalArrangement = Arrangement.SpaceAround,
         modifier = Modifier
-            .background(Color.Red)
+            .background(Color.Transparent)
             .fillMaxHeight()
     ) {
         InvestmentCard()

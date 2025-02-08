@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -18,8 +17,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun GoalProgressBar(percentage: Float = 1f) {
-    Column() {
+fun GoalProgressBar(modifier: Modifier, percentage: Float = 1f) {
+    Column(modifier = modifier) {
         Text(
             text = "Goal $20,000.00",
             style = MaterialTheme.typography.titleSmall,
@@ -52,5 +51,5 @@ fun GoalProgressBar(percentage: Float = 1f) {
 @Preview(showBackground = true)
 @Composable
 private fun GoalProgressBarPreview() {
-    GoalProgressBar(percentage = .5f)
+    GoalProgressBar(modifier = Modifier, percentage = .4f)
 }
