@@ -1,12 +1,9 @@
-package com.example.financetracker.features
+package com.example.financetracker.features.composables
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -20,14 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
-
 @Composable
-fun BoxesArea() {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(top = 16.dp)
-    ) {
+fun NewCardArea() {
+    Column() {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -39,7 +31,7 @@ fun BoxesArea() {
             )
 
             Button(
-                onClick = {/*TODO*/ },
+                onClick = {/*TODO*/},
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
@@ -48,27 +40,11 @@ fun BoxesArea() {
                 )
             }
         }
-
-        // TODO: Adicionar as caixinhas
     }
 }
 
-// Tela
-@Composable
-fun OverviewScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 72.dp)
-    ) {
-        Spacer(modifier = Modifier.height(20.dp))
-        BoxesArea()
-    }
-}
-
-// Preview da Tela
-@Preview(showSystemUi = true)
+@Preview
 @Composable
 fun OverviewScreenPreview() {
-    OverviewScreen()
+    NewCardArea()
 }
