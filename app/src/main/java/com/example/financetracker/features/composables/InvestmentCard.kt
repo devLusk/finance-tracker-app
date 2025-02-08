@@ -55,6 +55,11 @@ fun InvestmentCard() {
             )
 
             Column {
+                Text(
+                    text = "Goal $20,000.00",
+                    style = MaterialTheme.typography.titleSmall,
+                    color = Color.Gray
+                )
                 Button(
                     onClick = {},
                 ) { }
