@@ -50,7 +50,7 @@ fun InvestmentCard() {
             Text(
                 text = "$14,850.00",
                 style = MaterialTheme.typography.headlineMedium,
-                modifier = Modifier.weight(2f)
+                modifier = Modifier.weight(1.5f)
             )
 
             GoalProgressBar(modifier = Modifier.weight(1f), percentage = .9f)
