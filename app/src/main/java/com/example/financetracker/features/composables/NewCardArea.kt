@@ -1,10 +1,14 @@
 package com.example.financetracker.features.composables
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Button
@@ -31,7 +35,9 @@ fun NewCardArea() {
             )
 
             Button(
-                onClick = {/*TODO*/},
+                onClick = { /*TODO*/ },
+                contentPadding = PaddingValues(0.dp),
+                modifier = Modifier.size(35.dp)
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
@@ -39,6 +45,7 @@ fun NewCardArea() {
                     modifier = Modifier.size(20.dp)
                 )
             }
+
         }
     }
 }

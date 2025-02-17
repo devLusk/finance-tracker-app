@@ -35,7 +35,9 @@ fun NavigationButtons(modifier: Modifier = Modifier) {
                 modifier = Modifier.size(32.dp)
             )
         }
+
         Spacer(modifier = Modifier.width(34.dp))
+
         IconButton(onClick = {}) {
             Icon(
                 imageVector = Icons.Filled.Home,
@@ -43,7 +45,9 @@ fun NavigationButtons(modifier: Modifier = Modifier) {
                 modifier = Modifier.size(32.dp)
             )
         }
+
         Spacer(modifier = Modifier.width(34.dp))
+
         IconButton(onClick = {}) {
             Icon(
                 imageVector = Icons.Filled.Create,
