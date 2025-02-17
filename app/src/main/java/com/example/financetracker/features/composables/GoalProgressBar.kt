@@ -33,9 +33,7 @@ fun GoalProgressBar(modifier: Modifier, percentage: Float = 1f) {
                         .weight(percentage)
                 )
                 if (percentage < 1f) {
-                    Spacer(
-                        Modifier.weight(1f - percentage)
-                    )
+                    Spacer(Modifier.weight(1f - percentage))
                 }
             }
             Spacer(
