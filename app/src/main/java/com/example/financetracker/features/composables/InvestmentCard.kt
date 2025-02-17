@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun InvestmentCard() {
+fun InvestmentCard(item: CardItem) {
     Column(
         verticalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier
@@ -32,12 +32,12 @@ fun InvestmentCard() {
     ) {
         Column {
             Text(
-                text = "Motorcycle Reservation",
+                text = item.title,
                 style = MaterialTheme.typography.titleMedium
             )
 
             Text(
-                text = "Started at 12 Jan 24",
+                text = "Started at ${item.date}",
                 style = MaterialTheme.typography.titleMedium,
                 color = Color.Gray
             )
@@ -48,7 +48,7 @@ fun InvestmentCard() {
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Text(
-                text = "$14,850.00",
+                text = "$${"%,.2f".format(item.value)}",
                 style = MaterialTheme.typography.headlineMedium,
                 modifier = Modifier.weight(1.5f)
             )
@@ -57,6 +57,12 @@ fun InvestmentCard() {
         }
     }
 }
+
+data class CardItem(
+    val title: String,
+    val date: String,
+    val value: Float
+)
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
@@ -67,6 +73,12 @@ fun InvestmentCardPreview() {
             .background(Color.Transparent)
             .fillMaxHeight()
     ) {
-        InvestmentCard()
+        InvestmentCard(
+            CardItem(
+                title = "Motorcycle Reservation",
+                date = "12 Jan 24",
+                value = 14850f
+            )
+        )
     }
 }

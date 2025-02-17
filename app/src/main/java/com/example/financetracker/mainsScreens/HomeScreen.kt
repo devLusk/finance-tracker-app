@@ -10,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.financetracker.features.composables.CardItem
 import com.example.financetracker.features.composables.InvestmentCard
 import com.example.financetracker.features.composables.NavigationButtons
 import com.example.financetracker.features.composables.NewCardArea
@@ -31,7 +32,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        InvestmentCard()
+        InvestmentCard(CardItem(title = "Motorcycle Reservation", date = "16 Feb 24", value = 123f))
 
         Spacer(modifier = Modifier.weight(1f))
 
