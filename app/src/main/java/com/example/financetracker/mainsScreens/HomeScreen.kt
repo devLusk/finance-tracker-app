@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.financetracker.features.composables.InvestmentCard
+import com.example.financetracker.features.composables.NavigationButtons
 import com.example.financetracker.features.composables.NewCardArea
 import com.example.financetracker.features.composables.TotalBalanceCard
 
@@ -14,6 +15,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         TotalBalanceCard()
         NewCardArea()
         InvestmentCard()
+        NavigationButtons()
     }
 }
 
